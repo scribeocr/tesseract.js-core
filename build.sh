@@ -4,6 +4,8 @@ set -eo pipefail
 
 SCRIPT_ROOT=$(dirname $0)/build-scripts
 
+source $SCRIPT_ROOT/var.sh
+
 # verify Emscripten version
 emcc -v
 echo "installing dependencies"
@@ -27,4 +29,9 @@ $SCRIPT_ROOT/build-leptonica.sh
 echo "building tesseract"
 $SCRIPT_ROOT/build-tesseract.sh
 
-cp ./third_party/tesseract/build/bin/* .
+
+if [ $BUILD_VANILLA = 1 ]; then
+  cp ./third_party_vanilla/tesseract/build/bin/* vanilla
+else
+  cp ./third_party/tesseract/build/bin/* .
+fi

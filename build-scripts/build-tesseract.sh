@@ -2,7 +2,12 @@
 set -euo pipefail
 source $(dirname $0)/var.sh
 
-LIB_PATH=third_party/tesseract
+if [ $BUILD_VANILLA = 1 ]; then
+  LIB_PATH=third_party_vanilla/tesseract
+else
+  LIB_PATH=third_party/tesseract
+fi
+
 CXXFLAGS="$OPTIM_FLAGS"
 CM_FLAGS=(
   -DCMAKE_PREFIX_PATH=$BUILD_DIR

@@ -783,16 +783,16 @@ void EMSCRIPTEN_KEEPALIVE emscripten_bind_TessBaseAPI_ClearAdaptiveClassifier_0(
   self->ClearAdaptiveClassifier();
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_TessBaseAPI_SetImage_1(TessBaseAPI* self, Pix* imagedata, int exif, const float angle) {
-  self->SetImage(imagedata, exif, angle);
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_TessBaseAPI_SetImage_1(TessBaseAPI* self, Pix* imagedata, int exif, const float angle, bool upscale) {
+  self->SetImage(imagedata, exif, angle, upscale);
 }
 
-void EMSCRIPTEN_KEEPALIVE emscripten_bind_TessBaseAPI_SetImage_5(TessBaseAPI* self, const Uint8Array imagedata, int width, int height, int bytes_per_pixel, int bytes_per_line, int exif, const float angle) {
-  self->SetImage(imagedata, width, height, bytes_per_pixel, bytes_per_line, exif, angle);
+void EMSCRIPTEN_KEEPALIVE emscripten_bind_TessBaseAPI_SetImage_5(TessBaseAPI* self, const Uint8Array imagedata, int width, int height, int bytes_per_pixel, int bytes_per_line, int exif, const float angle, bool upscale) {
+  self->SetImage(imagedata, width, height, bytes_per_pixel, bytes_per_line, exif, angle, upscale);
 }
 
-int EMSCRIPTEN_KEEPALIVE emscripten_bind_TessBaseAPI_SetImageFile_1(TessBaseAPI* self, int exif, const float angle) {
-  return self->SetImageFile(exif, angle);
+int EMSCRIPTEN_KEEPALIVE emscripten_bind_TessBaseAPI_SetImageFile_1(TessBaseAPI* self, int exif, const float angle, bool upscale) {
+  return self->SetImageFile(exif, angle, upscale);
 }
 
 void EMSCRIPTEN_KEEPALIVE emscripten_bind_TessBaseAPI_SetSourceResolution_1(TessBaseAPI* self, int ppi) {

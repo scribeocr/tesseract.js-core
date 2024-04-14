@@ -4,6 +4,10 @@
 
 set -euo pipefail
 
+## Build vanilla version of Tesseract.
+## This branch is minimally edited from the Tesseract.js-core (and Tesseract) source code.
+BUILD_VANILLA=0
+
 ## Build to .wasm
 BUILD_WASM=1
 

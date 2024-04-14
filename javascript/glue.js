@@ -1416,20 +1416,20 @@ TessBaseAPI.prototype['ClearAdaptiveClassifier'] = TessBaseAPI.prototype.ClearAd
   _emscripten_bind_TessBaseAPI_ClearAdaptiveClassifier_0(self);
 };;
 
-TessBaseAPI.prototype['SetImage'] = TessBaseAPI.prototype.SetImage = /** @suppress {undefinedVars, duplicate} */function(imagedata, width, height, bytes_per_pixel, bytes_per_line, exif = 1, angle = 0) {
+TessBaseAPI.prototype['SetImage'] = TessBaseAPI.prototype.SetImage = /** @suppress {undefinedVars, duplicate} */function(imagedata, width, height, bytes_per_pixel, bytes_per_line, exif = 1, angle = 0, upscale = false) {
   var self = this.ptr;
   if (imagedata && typeof imagedata === 'object') imagedata = imagedata.ptr;
   if (width && typeof width === 'object') width = width.ptr;
   if (height && typeof height === 'object') height = height.ptr;
   if (bytes_per_pixel && typeof bytes_per_pixel === 'object') bytes_per_pixel = bytes_per_pixel.ptr;
   if (bytes_per_line && typeof bytes_per_line === 'object') bytes_per_line = bytes_per_line.ptr;
-  if (width === undefined || width === null) { _emscripten_bind_TessBaseAPI_SetImage_1(self, imagedata, exif, angle);  return }
-  _emscripten_bind_TessBaseAPI_SetImage_5(self, imagedata, width, height, bytes_per_pixel, bytes_per_line, exif, angle);
+  if (width === undefined || width === null) { _emscripten_bind_TessBaseAPI_SetImage_1(self, imagedata, exif, angle, upscale);  return }
+  _emscripten_bind_TessBaseAPI_SetImage_5(self, imagedata, width, height, bytes_per_pixel, bytes_per_line, exif, angle, upscale);
 };;
 
-TessBaseAPI.prototype['SetImageFile'] = TessBaseAPI.prototype.SetImageFile = /** @suppress {undefinedVars, duplicate} */function(exif = 1, angle = 0){
+TessBaseAPI.prototype['SetImageFile'] = TessBaseAPI.prototype.SetImageFile = /** @suppress {undefinedVars, duplicate} */function(exif = 1, angle = 0, upscale = false){
   var self = this.ptr;
-  return _emscripten_bind_TessBaseAPI_SetImageFile_1(self, exif, angle);
+  return _emscripten_bind_TessBaseAPI_SetImageFile_1(self, exif, angle, upscale);
 }
 
 TessBaseAPI.prototype['SetSourceResolution'] = TessBaseAPI.prototype.SetSourceResolution = /** @suppress {undefinedVars, duplicate} */function(ppi) {
