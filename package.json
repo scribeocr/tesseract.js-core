@@ -1,7 +1,7 @@
 {
-  "name": "tesseract.js-core",
+  "name": "@scribe.js/tesseract.js-core",
   "version": "5.1.0",
-  "description": "Tesseract C++ API in Pure Javascript",
+  "description": "Fork of tesseract.js-core used for scribe.js. Tesseract C++ API in Pure Javascript",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./tests/unit/*.test.js",
@@ -20,11 +20,12 @@
     "tesseract-core-simd.wasm.js",
     "tesseract-core-simd-lstm.js",
     "tesseract-core-simd-lstm.wasm",
-    "tesseract-core-simd-lstm.wasm.js"
+    "tesseract-core-simd-lstm.wasm.js",
+    "vanilla/*"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/naptha/tesseract.js-core.git"
+    "url": "https://github.com/scribeocr/tesseract.js-core.git"
   },
   "keywords": [
     "ocr",
@@ -43,15 +44,12 @@
     "multilingual",
     "english"
   ],
-  "author": "antimatter15",
-  "contributors": [
-    "jeromewu"
-  ],
-  "license": "Apache License 2.0",
+  "author": "Balearica",
+  "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/naptha/tesseract.js-core/issues"
+    "url": "https://github.com/scribeocr/tesseract.js-core/issues"
   },
-  "homepage": "https://github.com/naptha/tesseract.js-core",
+  "homepage": "https://github.com/scribeocr/scribe.js",
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
