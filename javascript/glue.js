@@ -1538,6 +1538,11 @@ TessBaseAPI.prototype['GetGradient'] = TessBaseAPI.prototype.GetGradient = /** @
   return _emscripten_bind_TessBaseAPI_GetGradient_0(self);
 };;
 
+TessBaseAPI.prototype['GetEstimatedResolution'] = TessBaseAPI.prototype.GetEstimatedResolution = /** @suppress {undefinedVars, duplicate} */function() {
+  var self = this.ptr;
+  return _emscripten_bind_TessBaseAPI_GetEstimatedResolution_0(self);
+};;
+
 TessBaseAPI.prototype['ProcessPages'] = TessBaseAPI.prototype.ProcessPages = /** @suppress {undefinedVars, duplicate} */function(filename, retry_config, timeout_millisec, renderer) {
   var self = this.ptr;
   ensureCache.prepare();

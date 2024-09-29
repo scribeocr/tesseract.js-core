@@ -819,6 +819,10 @@ float EMSCRIPTEN_KEEPALIVE emscripten_bind_TessBaseAPI_GetGradient_0(TessBaseAPI
   return self->GetGradient();
 }
 
+float EMSCRIPTEN_KEEPALIVE emscripten_bind_TessBaseAPI_GetEstimatedResolution_0(TessBaseAPI* self) {
+  return self->GetEstimatedResolution();
+}
+
 Boxa* EMSCRIPTEN_KEEPALIVE emscripten_bind_TessBaseAPI_GetRegions_1(TessBaseAPI* self, PixaPtr* pixa) {
   return self->GetRegions(pixa);
 }
