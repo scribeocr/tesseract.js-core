@@ -44,6 +44,7 @@ The generated files will be stored in root path.  When compiling, errors sometim
        7. Edited `ParamUtils::PrintParams` in `src/ccutil/params.cpp` to remove description text (resolves bug)
           1. The bug was reported in [this](https://github.com/tesseract-ocr/tesseract/issues/3943) Git Issue, so we can cut this point if resolved in a future version of Tesseract
        8. Edited `src/ccmain/tessedit.cpp` to save error log to separate file (`/debugDev.txt`)
+       9. Edited `ComputeWordBounds` in `src/ccstruct/pageres.cpp` to fix bug with incorrect LSTM bounding boxes
 
 ## Running Minimal Examples
 To run the browser examples, launch a web server in the root of the repo (i.e. run `http-server`).  Then navigate to the pages in `examples/web/minimal/` in your browser.  
