@@ -1,6 +1,6 @@
 {
   "name": "@scribe.js/tesseract.js-core",
-  "version": "5.2.2",
+  "version": "5.2.3",
   "description": "Fork of tesseract.js-core used for scribe.js. Tesseract C++ API in Pure Javascript",
   "main": "index.js",
   "scripts": {
