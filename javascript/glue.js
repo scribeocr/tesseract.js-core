@@ -1941,6 +1941,12 @@ Module['Pixa'] = Pixa;
     Module['PSM_COUNT'] = _emscripten_enum_PageSegMode_PSM_COUNT();
 
   }
-  if (runtimeInitialized) setupEnums();
-  else addOnInit(setupEnums);
+  if (Module['runtimeInitialized']) {
+    setupEnums();
+  } else {
+    var prev = Module['onRuntimeInitialized'];
+    Module['onRuntimeInitialized'] = prev
+      ? function () { prev.call(this); setupEnums(); }
+      : function () { setupEnums(); };
+  }
 })();
