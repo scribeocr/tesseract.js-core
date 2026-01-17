@@ -3,6 +3,7 @@
   "version": "7.0.0",
   "description": "Fork of tesseract.js-core used for scribe.js. Tesseract C++ API in Pure Javascript",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "mocha ./tests/unit/*.test.js",
     "example": "http-server -p 3000"
