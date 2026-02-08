@@ -32,6 +32,8 @@ $SCRIPT_ROOT/build-tesseract.sh
 
 if [ $BUILD_VANILLA = 1 ]; then
   cp ./third_party_vanilla/tesseract/build/bin/* vanilla
+  sed -i 's/await import("module")/await import(\/* webpackIgnore: true *\/ "module")/g' vanilla/tesseract-core*.js
 else
   cp ./third_party/tesseract/build/bin/* .
+  sed -i 's/await import("module")/await import(\/* webpackIgnore: true *\/ "module")/g' tesseract-core*.js
 fi

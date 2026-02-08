@@ -5,6 +5,7 @@ source $(dirname $0)/var.sh
 
 LIB_PATH=third_party/giflib
 CONF_FLAGS=(
+  --host=wasm32-unknown-emscripten
   --prefix=$BUILD_DIR                                 # install library in a build directory for FFmpeg to include
   --enable-shared=no
 )
