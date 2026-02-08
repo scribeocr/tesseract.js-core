@@ -2,14 +2,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <script src="../../../tesseract-core-simd.wasm.js"></script>
 </head>
 
 <body>
   <input type="file" id="uploader">
   <textarea id="message"></textarea>
 
-  <script>
+  <script type="module">
+    import TesseractCore from '../../../tesseract-core.js';
 
     const readFromBlobOrFile = (blob) => (
       new Promise((resolve, reject) => {
